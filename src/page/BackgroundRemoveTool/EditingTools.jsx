@@ -7,7 +7,7 @@ import React from 'react'
 const EditingTools = () => {
     return (
         <div>
-            <div className="bg-cover bg-center rounded-3xl lg:mx-12.5 mx-4 my-24.5"
+            <div className="bg-cover bg-center rounded-3xl lg:mx-12.5 mx-4 sm:my-24.5 my-20 mb-0"
                 style={{ backgroundImage: `url(${editingtoolbg.src})` }}>
                 <div className='text-center xl:text-left'>
                     {/* <div> */}

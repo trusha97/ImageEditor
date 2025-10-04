@@ -5,18 +5,20 @@ import { motion } from "framer-motion";
 import Header from "@/Typography/header/Header";
 import Paragraph from "@/Typography/text/Paragraph";
 import Image from "next/image";
-import { Ai1, Ai2, Ai3, } from "@/utils/image";
+import { Ai1, Ai2, Ai3, note, obremover, sound, textspech, textspechimage } from "@/utils/image";
+
 const ImageGenerator = () => {
+    const [isHovered, setIsHovered] = useState(false);
     return (
-        <div>
+        <>
             <div
-                className="relative bg-cover bg-center rounded-[30px] lg:mx-12 mx-3.5 my-10 py-20 px-6 text-center overflow-hidden"
+                class="relative bg-cover bg-center rounded-[30px] lg:mx-12 mx-3.5 my-10 sm:py-20 pt-0 px-6 text-center overflow-hidden"
             >
                 <div className="absolute inset-0 flex items-center justify-center">
                     <Header
                         level={2}
                         text="NEW TOOLS"
-                        className=" xl:text-[160px] md:text-[100px] text-[50px] sm:block hidden !font-bold text-[var(--litesceen)] opacity-30 tracking-widest select-none"
+                        className=" xl:text-[160px] md:text-[100px] sm:block hidden text-[50px] !font-bold text-[var(--litesceen)] opacity-30 tracking-widest select-none"
                     />
                 </div>
 
@@ -33,74 +35,73 @@ const ImageGenerator = () => {
             </div>
 
             <div className="flex flex-col xl:flex-row justify-between items-center lg:px-20 md:px-12 px-4 gap-12">
-  {/* Left Side (Text Section) */}
-  <div className="text-center xl:text-left max-w-[600px] mx-auto xl:mx-0">
-    <div className="mb-4">
-      <button
-        type="button"
-        className="text-[var(--orange)] bg-[var(--liteorange)] rounded-[44px] px-4 py-1.5 font-bold text-sm leading-4"
-      >
-        NEW
-      </button>
-    </div>
+                <div className="xl:text-left text-center !mx-auto">
+                    <div className="xl:text-left text-center !mx-auto">
+                        <button
+                            type="button"
+                            className=" text-[var(--orange)] bg-[var(--liteorange)] rounded-[44px] px-4 py-1.5 font-bold text-sm leading-4"
+                        >
+                            NEW
+                        </button>
+                    </div>
+                    <Header className="text-[var(--doubelblack)] text-[40px] font-bold" text="AI Image Generator" />
+                    <Paragraph className="font-medium text-lg xl:text-left text-center !mx-auto  text-[var(--paragraphtitle)] !max-w-[563px]" text="Create stunning visuals effortlessly with our AI Image Generator. Transform your ideas into high-quality images with advanced technology that brings your concepts to life." />
+                    <button
+                        type="button"
+                        disabled
+                        className=" mt-11 font-bold text-base leading-5 px-16 py-3.5 rounded-[var(--radius)] bg-[var(--btnbg)] text-[var(--white)]"
+                    >
+                        Try Now
+                    </button>
+                </div>
 
-    <Header
-      className="text-[var(--doubelblack)] md:text-5xl text-3xl font-bold leading-tight"
-      text="AI Image Generator"
-    />
-    <Paragraph
-      className="font-medium md:text-lg text-base text-center xl:text-left mx-auto xl:mx-0 text-[var(--paragraphtitle)] max-w-[563px] mt-4"
-      text="Create stunning visuals effortlessly with our AI Image Generator. Transform your ideas into high-quality images with advanced technology that brings your concepts to life."
-    />
-    <button
-      type="button"
-      disabled
-      className="mt-8 font-bold text-base leading-5 px-10 md:px-16 py-3.5 rounded-[var(--radius)] bg-[var(--btnbg)] text-[var(--white)]"
-    >
-      Try Now
-    </button>
-  </div>
+                <div className="flex justify-end items-center xl:w-[738px] w-full sm:h-[494px] h-[300px]">
+                    <div className="relative group xl:w-[664px] w-full sm:h-[420px] h-[290px] flex justify-center">
 
-  {/* Right Side (Images Section) */}
-  <div className="flex justify-center items-center xl:w-[738px] w-full h-auto">
-    <div className="relative group md:w-[500px] w-full h-[380px] md:h-[420px] flex justify-center">
-      {/* Card 1 */}
-      <div className="absolute transition-all duration-500 ease-in-out group-hover:-rotate-6 group-hover:-translate-x-8">
-        <Image
-          src={Ai1}
-          alt="ai image1"
-          width={280}
-          height={340}
-          className="rounded-xl shadow-xl"
-        />
-      </div>
+                        {/* Card 1 */}
+                        <div className="absolute transition-all duration-500 ease-in-out
+                    xl:group-hover:-translate-x-50
+                    sm:group-hover:-translate-x-30
+                    group-hover:-translate-x-15
+                    group-hover:-rotate-6">
+                            <Image
+                                src={Ai1}
+                                alt="ai image1"
+                                
+                                height={380}
+                                className="rounded-xl shadow-xl md:w-[325px] sm:w-[250px] w-[197px]"
+                            />
+                        </div>
 
-      {/* Card 2 (Main Card) */}
-      <div className="absolute transition-all duration-500 ease-in-out z-10">
-        <Image
-          src={Ai2}
-          alt="ai image2"
-          width={280}
-          height={340}
-          className="rounded-xl shadow-xl"
-        />
-      </div>
+                        {/* Card 2 (middle - main card) */}
+                        <div className="absolute transition-all duration-500 ease-in-out z-10">
+                            <Image
+                                src={Ai2}
+                                alt="ai image2"
+                                height={380}
+                                className="rounded-xl shadow-xl md:w-[325px] sm:w-[250px] w-[197px]"
+                            />
+                        </div>
 
-      {/* Card 3 */}
-      <div className="absolute transition-all duration-500 ease-in-out group-hover:rotate-6 group-hover:translate-x-8">
-        <Image
-          src={Ai3}
-          alt="ai image3"
-          width={280}
-          height={340}
-          className="rounded-xl shadow-xl"
-        />
-      </div>
-    </div>
-  </div>
-</div>
+                        {/* Card 3 */}
+                        <div className="absolute transition-all duration-500 ease-in-out
+                    xl:group-hover:translate-x-50
+                    sm:group-hover:translate-x-30
+                    group-hover:translate-x-15
+                    group-hover:rotate-6">
+                            <Image
+                                src={Ai3}
+                                alt="ai image3"
+                                height={380}
+                                className="rounded-xl shadow-xl md:w-[325px] sm:w-[250px] w-[197px]"
+                            />
+                        </div>
 
-        </div>
+                    </div>
+                </div>
+
+            </div>
+        </>
     )
 }
 
