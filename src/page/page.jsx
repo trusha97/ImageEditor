@@ -8,6 +8,7 @@ import SliderImage from './BackgroundRemoveTool/SliderImage'
 import CardPlan from './BackgroundRemoveTool/CardPlan'
 import Creativehorizons from './BackgroundRemoveTool/CreativeHorizons'
 import ImageGenerator from './BackgroundRemoveTool/ImageGenerator'
+import ObjectRemover from './BackgroundRemoveTool/ObjectRemover'
 
 const BackgroundRemoveTool = () => {
   return (
@@ -15,12 +16,12 @@ const BackgroundRemoveTool = () => {
       <Empower/>
       <Creativehorizons/>
       <EditingTools/>
-      {/* <GenerativeAi/> */}
       <ImageGenerator/>
+      <ObjectRemover/>
+      {/* <GenerativeAi/> */}
       {/* <Faq/> */}
       <CardPlan/>
-      {/* <SliderImage/> */}
-      
+      <SliderImage/>
     </>
   )
 }
