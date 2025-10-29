@@ -40,7 +40,7 @@ const GenerativeAi = () => {
                 {/* Content Overlay */}
                 <div className="absolute inset-0 -top-[70px] xl:flex block justify-between 2xl:px-[157px] xl:px-28 px-4 !h-[620px] items-center ">
                     {/* ==== left Side (Text Content) ==== */}
-                    <div className="text-center !mx-auto">
+                    <div className="xl:text-left text-center !mx-auto">
                         <div>
                             <button
                                 type="button"
@@ -56,7 +56,7 @@ const GenerativeAi = () => {
                         />
 
                         <Paragraph
-                            className="font-medium text-lg text-[var(--paragraphtitle)] !max-w-[563px] mt-3 text-center !mx-auto"
+                            className="font-medium text-lg text-[var(--paragraphtitle)] !max-w-[563px] mt-3 xl:text-left text-center !mx-auto"
                             text="Create stunning visuals effortlessly with our AI Image Generator. Transform your ideas into high-quality images with advanced technology that brings your concepts to life."
                         />
 
