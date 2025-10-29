@@ -70,7 +70,7 @@ const GenerativeAi = () => {
                     </div>
 
                     {/* ==== right Side (Images) ==== */}
-                    <div className="relative md:w-[500px] sm:w-[400px] w-[300px] md:h-[350px] sm:h-[325px] h-[275px] group mx-auto ">
+                    <div className="relative md:w-[500px] sm:w-[400px] w-[275px] md:h-[350px] sm:h-[325px] h-[250px] group mx-auto ">
                         {/* Main Image */}
                         <Image
                             src={textspechimage}
