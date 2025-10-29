@@ -18,7 +18,7 @@ const BackgroundRemoveTool = () => {
       <EditingTools/>
       <ImageGenerator/>
       <ObjectRemover/>
-      {/* <GenerativeAi/> */}
+      <GenerativeAi/>
       {/* <Faq/> */}
       <CardPlan/>
       <SliderImage/>

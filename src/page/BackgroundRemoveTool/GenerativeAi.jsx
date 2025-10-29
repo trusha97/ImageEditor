@@ -29,18 +29,18 @@ const GenerativeAi = () => {
     return (
 
         <>
-            <div className="relative  !h-[751px]  ml-12 mr-12.5 !mb-12">
+            <div className="relative  xl:!h-[600px] sm:h-[750px] h-[600px] 2xl:ml-12 ml-0 2xl:mr-12.5 mr-0 !mb-12">
                 {/* Background Image */}
                 <Image
                     src={textspech}
                     alt="textspech"
-                    className="w-full !h-[620px]  object-cover rounded-lg absolute -top-16.5"
+                    className="hidden sm:block w-full xl:!h-[620px] h-[775px] object-cover rounded-lg absolute -top-16.5"
                 />
 
                 {/* Content Overlay */}
-                <div className="absolute inset-0 -top-[70px] flex justify-between items-center px-[157px] !h-[620px] ">
+                <div className="absolute inset-0 -top-[70px] xl:flex block justify-between 2xl:px-[157px] xl:px-28 px-4 !h-[620px] items-center ">
                     {/* ==== left Side (Text Content) ==== */}
-                    <div>
+                    <div className="text-center !mx-auto">
                         <div>
                             <button
                                 type="button"
@@ -56,21 +56,21 @@ const GenerativeAi = () => {
                         />
 
                         <Paragraph
-                            className="font-medium text-lg text-[var(--paragraphtitle)] !max-w-[563px] mt-3"
+                            className="font-medium text-lg text-[var(--paragraphtitle)] !max-w-[563px] mt-3 text-center !mx-auto"
                             text="Create stunning visuals effortlessly with our AI Image Generator. Transform your ideas into high-quality images with advanced technology that brings your concepts to life."
                         />
 
                         <button
                             type="button"
                             disabled
-                            className="mt-11 font-bold text-base leading-5 px-16 py-3.5 rounded-[var(--radius)] bg-[var(--btnbg)] text-[var(--white)]"
+                            className="mt-11 font-bold text-base leading-5 px-16 py-3.5 rounded-[var(--radius)] bg-[var(--btnbg)] text-[var(--white)] xl:mb-0 mb-14.5"
                         >
                             Try Now
                         </button>
                     </div>
 
                     {/* ==== right Side (Images) ==== */}
-                    <div className="relative w-[500px] h-[350px] group">
+                    <div className="relative md:w-[500px] sm:w-[400px] w-[300px] md:h-[350px] sm:h-[325px] h-[275px] group mx-auto ">
                         {/* Main Image */}
                         <Image
                             src={textspechimage}
@@ -82,7 +82,7 @@ const GenerativeAi = () => {
                         <Image
                             src={note}
                             alt="note"
-                            className="absolute top-4 right-4 w-[118.76px] h-[146.3px] 
+                            className="absolute top-4 right-4 md:w-[118.76px] sm:w-[95.76px] w-[70.76px] md:h-[146.3px] sm:h-[115.3px] h-[80.3px] 
                    transition-all duration-500 
                    group-hover:translate-x-[80%]"
                         />
@@ -92,7 +92,7 @@ const GenerativeAi = () => {
                             src={sound}
                             alt="sound"
                             className="absolute bottom-4 left-1/2 transform -translate-x-1/2 
-                   !w-[378.43px] h-[95.61px] 
+                   md:!w-[378.43px] sm:w-[270.43px] w-[230.43px] md:h-[95.61px] sm:h-[70.61px] h-[50.61px]
                    transition-all duration-500 
                    group-hover:translate-y-[80%]"
                         />
