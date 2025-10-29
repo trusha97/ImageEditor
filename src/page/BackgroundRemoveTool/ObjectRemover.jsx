@@ -43,7 +43,7 @@ const ObjectRemover = () => {
         </div>
 
         {/* ==== Left Side (Images) ==== */}
-        <div className="xl:order-1 order-2 relative flex items-center w-full xl:w-[738px] h-[494px] overflow-hidden mt-8 abobrom ">
+        <div className="xl:order-1 order-2 relative flex items-center w-full xl:w-[738px] sm:h-[494px] h-[325px] overflow-hidden mt-8 abobrom ">
           <div className="absolute z-50 md:top-0 top-16  md:left-0 sm:left-28 left-14 aaa ">
             <Image
               src={obremover}
